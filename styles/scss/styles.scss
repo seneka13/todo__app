@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
+@import './modal.scss';
+
+@mixin flex($jc, $ai, $fd, $wrap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap:$wrap
+};
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5F81B2;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main {
+    width: 1000px;
+    margin: 0 auto;
+
+    .header {
+        padding-top: 55px;
+        @include flex(space-between, flex-start, row, nowrap);
+        &__left {
+            color: #fff;
+            font-weight: 900;
+        }
+        &__logo {
+            font-size: 60px;
+            margin: 0;
+        }
+        &__desc {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        &__right {
+            #createBtn {
+                @include flex(center, center, row, nowrap);
+                width: 287px;
+                font-size: 16px;
+                background-color: #F5D57F;
+                border: none;
+                border-radius: 4px;
+                font-weight: 400;
+                padding: 9px 0px;
+                cursor: pointer;
+                line-height: 22px;
+                margin-top: 25px;
+                transition-duration: 0.2s;
+                &:hover {
+                    background-color: #dbaa25;
+                }
+            }
+        }
+    }
+    .task {
+
+        &__content {
+            padding-top: 86px;
+        }
+        &__title {
+            color: #fff;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        &__tasks {
+            @include flex(flex-start, flex-start, row, wrap);
+            align-content: flex-start;
+            gap: 20px;
+            .taskNode {
+                width: 450px;
+                background-color: #FFFBE3;
+                border-radius: 4px;
+                padding: 16px 20px;
+                .taskHeader {
+                    @include flex(space-between, flex-start, row, nowrap);
+                    h3 {
+                        margin: 0;
+                        margin-bottom: 7px;
+                        font-weight: 900;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    .taskCheckBox {
+                        border: 1px solid #5F81B2;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                        font-size: 22px;
+                        transform: scale(1.8);
+                    }
+                }
+                p {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 0;
+                }
+                .removeTaskBtn {
+                    width: 12px;
+                    height: 16px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    float: right;
+                }
+            }
+        }
+    }
+}

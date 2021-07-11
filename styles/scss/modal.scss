@@ -1,0 +1,166 @@
+
+
+
+// Create Modal 
+
+.create__modal__layer {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    .create__modal__body {
+        width: 460px;
+        background-color: #FFFBE3;
+        padding: 20px;
+        margin: 0 auto;
+        border-radius: 4px;
+        .create__modal__header {
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                margin: 0;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 27px;
+            }
+            span {
+                margin-top: -15px;
+                font-size: 30px;
+                cursor: pointer;
+                color: #000;
+            }
+        }
+        .create__modal__content {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+                padding-top: 10px;
+                .input__field {
+                    border: 1px solid #5F81B2;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+
+                    padding-left: 15px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                .input__title {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+                .input__desc {
+                    padding-bottom: 80px;
+                    height: 100px;
+                    padding-top: 15px;
+                }
+            }
+            #err__msg {
+                display: none;
+                color: red;
+            }
+            .create__modal__buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 18px;
+                .create__button {
+                    border: none;
+                    height: 40px;
+                    cursor: pointer;
+                    color: #fff;
+                    outline: none;
+                    transition-duration: 0.2s;
+                }
+                .create__save {
+                    background-color: #5F81B2;
+                    &:hover {
+                        background-color: #2f5994;
+                    }
+                }
+                .create__undo {
+                    background-color:#AEAEAE;
+                    &:hover {
+                        background-color: #7d7d7d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Warn Modal 
+
+.warnModal__layer {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    .warnModal__Body {
+        width: 350px;
+        background-color: #FFFBE3;
+        border-radius: 4px;
+        margin: 0 auto;
+        padding: 20px;
+        .warnModal__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .warn__msg {
+                margin: 0;
+            }
+            .warnModal__x {
+                cursor: pointer;
+                font-size: 30px;
+                color: #000;
+            }
+        }
+        .warnModal__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 24px;
+            .warn__btn {
+                font-size: 16px;
+                line-height: 22px;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0px;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            .warn__btn_delete {
+                background-color: #AC4141;
+                transition-duration: 0.3s;
+                &:hover {
+                    background: #752d2d;
+                }
+            }
+            .warn__btn_cancel {
+                background: #AEAEAE;
+                transition-duration: 0.3s;
+                &:hover {
+                    background:#8a8a8a;
+                }
+            }
+        }
+    }
+}

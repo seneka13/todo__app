@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/styles.css">
+</head>
+<body>
+
+    <!-- createTask Modal  -->
+
+    <div class="create__modal__layer">
+        <div class="create__modal__body">
+            <div class="create__modal__header">
+                <h3>Создать задачу</h3>
+                <span id="create__modal__close">&times;</span>
+            </div>
+            <div class="create__modal__content">
+                <div class="inputs">
+                    <input type="text" class="input__field input__title" name="createTaskInput" placeholder="Заголовок задачи">
+                    <input type="text" class="input__field input__desc" name="createTaskInput" placeholder="описание">
+                </div>
+                <p id="err__msg">Тут будет текст ошибки</p>
+                <div class="create__modal__buttons">
+                    <button class="create__button create__save">Сохранить</button>
+                    <button class="create__button create__undo">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Open Warn Modal  -->
+
+    <div class="warnModal__layer">
+        <div class="warnModal__Body">
+            <div class="warnModal__header">
+                <p class="warn__msg">Вы уверены что хотите удалить задачу навсегда?</p>
+                <span class="warnModal__x">&times;</span>
+            </div>
+            <div class="warnModal__buttons">
+                <button class="warn__btn warn__btn_delete">Удалить</button>
+                <button class="warn__btn warn__btn_cancel">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <!-- Main  -->
+    <main class="main">
+        <div class="main__header header">
+            <div class="header__left">
+                <h1 class="header__logo">TODOLIST</h1>
+                <p class="header__desc">BY NAME SURNAME</p>
+            </div>
+            <div class="header__right">
+                <button id="createBtn">Создать новую задачу</button>
+            </div>
+        </div>
+
+        <div class="main__tasks task">
+            <div class="task__content">
+                <h2 class="task__title">СПИСОК ЗАДАЧ</h2>
+                <div class="task__tasks">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./script/index.js" type="module"></script>
+</body> 
+</html>
