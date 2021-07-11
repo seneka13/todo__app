@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
 @import './modal.scss';
+@import './adapt';
 
 @mixin flex($jc, $ai, $fd, $wrap) {
     display: flex;
@@ -19,10 +20,19 @@ body {
 .main {
     width: 1000px;
     margin: 0 auto;
+    @include adapt(iphone) {
+        width: auto;
+        padding: 0px 25px;
+        margin: 0;
+        margin-top: -40px;
+    };
 
     .header {
         padding-top: 55px;
         @include flex(space-between, flex-start, row, nowrap);
+        @include adapt(iphone) {
+            @include flex(flex-start, flex-start, column, nowrap);
+        }
         &__left {
             color: #fff;
             font-weight: 900;
@@ -30,6 +40,9 @@ body {
         &__logo {
             font-size: 60px;
             margin: 0;
+            @include adapt(iphone) {
+                font-size: 40px;
+            };
         }
         &__desc {
             margin: 0;
@@ -60,6 +73,9 @@ body {
 
         &__content {
             padding-top: 86px;
+            @include adapt(iphone) {
+                padding-top: 27px;
+            }
         }
         &__title {
             color: #fff;
@@ -69,6 +85,9 @@ body {
             line-height: 30px;
             margin: 0;
             margin-bottom: 36px;
+            @include adapt(iphone) {
+                font-size: 18px;
+            }
         }
         &__tasks {
             @include flex(flex-start, flex-start, row, wrap);
@@ -102,13 +121,31 @@ body {
                     line-height: 22px;
                     margin: 0;
                 }
-                .removeTaskBtn {
-                    width: 12px;
-                    height: 16px;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                    float: right;
+                .task__footer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .changeBtnBlock{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .changeBtn {
+                            border: none;
+                            background:none;
+                            color: #2A5B94;
+                            text-decoration: underline;
+                            font-size: 14px;
+                            line-height: 19px;
+                            cursor: pointer;
+                        }
+                    }
+                    .removeTaskBtn {
+                        width: 12px;
+                        height: 16px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                    }
                 }
             }
         }

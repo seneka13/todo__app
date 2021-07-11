@@ -1,6 +1,5 @@
 
 
-
 // Create Modal 
 
 .create__modal__layer {
@@ -159,6 +158,100 @@
                 transition-duration: 0.3s;
                 &:hover {
                     background:#8a8a8a;
+                }
+            }
+        }
+    }
+}
+
+
+// Change Modal 
+
+.changeModal__layer {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -5;
+    transition-duration: 0.3s;
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    .changeModal__body {
+        border-radius: 4px;
+        background-color: #FFFBE3;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 auto;
+        width: 500px;
+        .changeModal__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .changeModal__title {
+                font-size: 20px;
+                line-height: 27px;
+                margin: 0;
+            }
+            .changeModal__closeBtn {
+                font-size: 30px;
+                color: #000;
+                cursor: pointer;
+            }
+        }
+        .changeModal_inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            .changeInputs {
+                border: none;
+                outline: none;
+                background: #FFFFFF;
+                border: 1px solid #5F81B2;
+                box-sizing: border-box;
+                border-radius: 4px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .changeInput__title {
+                font-weight: 400;
+                padding: 7px 15px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .changeInput__desc {
+                padding: 8px 0px 70px 15px;
+            }
+        }
+        .changeModal__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 20px;
+            color: #fff;
+            .changeModal__button {
+                border: none;
+                border-radius: 4px;   
+                transition-duration: 0.3s;
+                padding: 10px 0px;
+                color: #fff;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .changeModal__button_save {
+                background-color: #5F81B2;
+                &:hover {
+                    background-color: #496185;
+                }
+            }
+            .changeModal__button_undo {
+                background-color:#AEAEAE;
+                &:hover {
+                    background-color: #8a8888;
                 }
             }
         }

@@ -9,6 +9,24 @@
 </head>
 <body>
 
+    <!-- Change Modal  -->
+    <div class="changeModal__layer">
+        <div class="changeModal__body">
+            <div class="changeModal__header">
+                <h3 class="changeModal__title">Изменить задачу</h3>
+                <span class="changeModal__closeBtn">&times;</span>
+            </div>
+            <div class="changeModal_inputs">
+                <input type="text" class="changeInputs changeInput__title" placeholder="Заголовок задачи">
+                <input type="text" class="changeInputs changeInput__desc" placeholder="Описание">
+            </div>
+            <div class="changeModal__buttons">
+                <button class="changeModal__button changeModal__button_save">Сохранить</button>
+                <button class="changeModal__button changeModal__button_undo">Отмена</button>
+            </div>
+        </div>
+    </div>
+
     <!-- createTask Modal  -->
 
     <div class="create__modal__layer">
@@ -45,7 +63,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Main  -->
     <main class="main">
         <div class="main__header header">
@@ -67,7 +85,6 @@
             </div>
         </div>
     </main>
-
 
     <script src="./script/index.js" type="module"></script>
 </body> 

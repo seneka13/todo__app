@@ -1,6 +1,4 @@
 
-
-
 function createElem(tag, className, innerHTML) {
     let elemNode = document.createElement(tag);
         elemNode.classList.add(className);

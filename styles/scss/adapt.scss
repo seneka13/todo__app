@@ -1,0 +1,6 @@
+
+@mixin adapt($break) {
+    @if $break == iphone {
+        @media screen and(max-width: 375px) {@content}
+    }
+}
